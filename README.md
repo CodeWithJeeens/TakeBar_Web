@@ -1,4 +1,7 @@
 # TakeBar_Web
  A website to beautify the original TakeCard website
 
- <img src="assets/app1.png" width="128"/>
+<p align="center">
+  <img src="assets/mockups/app1_iphone12black_portrait.png" width="350">
+  <img src="assets/mockups/app1_iphone12black_portrait.png" width="350">
+</p>
