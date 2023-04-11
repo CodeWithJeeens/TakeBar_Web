@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <meta name="description" content="PWA Web APP" />
+    <meta name="theme-color" content="#171717" />
     <title>TakTv Card</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="public/style.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="public/scripts/popout.js"></script>
-
-
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="PWA Splash">
 
     <link rel="apple-touch-startup-image" href="assets/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -25,17 +23,33 @@
     <link rel="apple-touch-startup-image" href="assets/splashscreens/ipadpro2_splash.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="assets/splashscreens/ipadpro2_splash.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo192.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="public/scripts/popout.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js', {
+                    scope: '/'
+                }).then(function(registration) {
+                    console.log('Service Worker wurde erfolgreich registriert:', registration.scope);
+                }, function(err) {
+                    console.error('Fehler bei der Registrierung des Service Workers:', err);
+                });
+            });
+        }
+    </script>
 </head>
 
 <body>
 
-    <br style='color: red;margin-top: 20px;margin-bottom: 20px;'></br>
-    <br>
+    <p style='color: red;margin-top: 20px;margin-bottom: 20px;'></p>
     <div class="card">
         <div class="bank-logo"></div>
         <div class="card-number">HomeForCorona</div>
         <div class="card-holder">Guthaben</div>
-        <div class="card-number">18.50€</div>
+        <div class="card-number">0.50€</div>
     </div>
 
     <table class="product-table">
