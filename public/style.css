@@ -14,10 +14,10 @@ body {
 .card {
     position: center;
     margin: 20px auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 320px;
-    height: 200px;
+    padding: 10px;
+    width: 100%;
+    max-width: 360px;
+    height: 222px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -29,7 +29,7 @@ body {
 .card .bank-logo {
     width: 505px;
     height: 50px;
-    background-image: url("../assets/logo.png");
+    background-image: url("../assets/logo.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -116,7 +116,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #171717;
+    padding-bottom: 15px;
 }
 
 .navbar-item {
@@ -136,7 +137,7 @@ body {
     padding-bottom: 0px;
     width: 40px;
     height: 40px;
-    margin-left: 25px;
+    margin-left: 45px;
 }
 
 .navbar-item3 {
@@ -144,7 +145,7 @@ body {
     padding-bottom: 0px;
     width: 40px;
     height: 40px;
-    margin-right: 25px;
+    margin-right: 45px;
     ;
 }
 
@@ -170,14 +171,24 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    width: 400px;
-    height: 150px;
+    width: 90%;
+    height: 222px;
     padding: 20px;
-    background: #fff;
-    border-radius: 5px;
+    background: #171717;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 2;
+}
+
+.popup h3 {
+    color: #a0a0a0;
+}
+
+.popup p {
+    color: #a0a0a0;
+    padding-bottom: 40px;
+    padding-top: 15px;
 }
 
 
@@ -185,11 +196,54 @@ body {
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 17px;
+    right: 27px;
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
     z-index: 9999;
+}
+
+.close-btn img {
+    height: 33px;
+    width: 33px;
+}
+
+.navbarpop {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+}
+
+.navbar-itempop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: none;
+    text-decoration: none;
+    padding-bottom: 0;
+}
+
+.navbar-item2pop {
+    margin-right: auto;
+    padding-bottom: 0px;
+    width: 32px;
+    height: 32px;
+    margin-left: 60px;
+}
+
+.navbar-item3pop {
+    margin-left: auto;
+    padding-bottom: 0px;
+    width: 32px;
+    height: 32px;
+    margin-right: 60px;
+    ;
 }
 
 
@@ -202,5 +256,5 @@ body {
 
 .love {
     align-items: center;
-    margin-top: 15px;
+    margin-top: 33px;
 }
