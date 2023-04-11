@@ -7,5 +7,5 @@
 
 <p align="center">
   <img src="assets/mockups/bild.png" width="350">
-  <img src="assets/bild2.png" width="350">
+  <img src="assets/mockups/bild2.png" width="350">
 </p>
