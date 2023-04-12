@@ -29,7 +29,7 @@ body {
 .card .bank-logo {
     width: 505px;
     height: 50px;
-    background-image: url("../assets/logo.svg");
+    background-image: url("../assets/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -95,8 +95,8 @@ body {
 }
 
 .product-table td img {
-    width: 100%;
-    height: auto;
+    width: 64px;
+    height: 86px;
     border-radius: 5px;
     box-shadow: none;
     vertical-align: middle;
