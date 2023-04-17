@@ -11,9 +11,9 @@ addEventListener('install', function(event) {
                 'assets/icons/setting.png',
                 '/assets/products/redbull.webp',
                 '/assets/products/icetea.webp',
-                '/public/style.css',
-                '/public/scripts/popout.js',
-                '/public/scripts/pulltorefresh.js',
+                '/style.css',
+                '/js/popout.js',
+                '/js/pulltorefresh.js',
                 '/manifest.json'
 
 
