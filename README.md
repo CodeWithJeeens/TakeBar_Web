@@ -15,6 +15,6 @@
 
 # Product Img
 <p align="center">
-  <img src="assets/producs/redbull.webp" width="64" height="86">
-  <img src="assetsproducs/icetea.webp" width="64" height="86">
+  <img src="assets/products/redbull.webp" width="64" height="86">
+  <img src="assets/products/icetea.webp" width="64" height="86">
 </p>
