@@ -3,7 +3,7 @@
     "name": "TakeTv Card",
     "display": "standalone",
     "short_name": "TakeTV",
-    "start_url": "/taketv/",
+    "start_url": "https://site.local/",
     "version": "1.0",
 
     "icons": [{
@@ -12,13 +12,20 @@
             "type": "image/png"
         },
         {
+            "src": "assets/logo192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
             "src": "assets/logo512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#333333",
-    "background_color": "#333333"
+    "theme_color": "#171717",
+    "background_color": "#171717",
+    "orientation": "portrait-primary"
 
 
 

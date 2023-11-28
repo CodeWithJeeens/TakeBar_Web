@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <meta name="description" content="PWA Web APP" />
+    <meta name="theme-color" content="#171717" />
     <title>TakTv Card</title>
 
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" type="text/css" href="public/style.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/popout.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="PWA Splash">
 
     <link rel="apple-touch-startup-image" href="assets/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -25,17 +23,49 @@
     <link rel="apple-touch-startup-image" href="assets/splashscreens/ipadpro2_splash.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="assets/splashscreens/ipadpro2_splash.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo192.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/popout.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js', {
+                    scope: '/'
+                }).then(function(registration) {
+                    console.log('Service Worker wurde erfolgreich registriert:', registration.scope);
+                }, function(err) {
+                    console.error('Fehler bei der Registrierung des Service Workers:', err);
+                });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
 
-    <br style='color: red;margin-top: 20px;margin-bottom: 20px;'></br>
-    <br>
+            <!-- Script -->
+            <script src="//unpkg.com/hammer-touchemulator@0.0.2/touch-emulator.js"></script>
+            <script>
+                TouchEmulator()
+            </script>
+            <script src="js/pulltorefresh.js" type="text/javascript"></script>
+            <script type='text/javascript'>
+                PullToRefresh.init({
+                    mainElement: 'body',
+                    onRefresh: function() {
+                        window.location.reload();
+                    }
+                });
+            </script>
+
+    <p style='color: red;margin-top: 20px;margin-bottom: 20px;'></p>
     <div class="card">
         <div class="bank-logo"></div>
         <div class="card-number">HomeForCorona</div>
         <div class="card-holder">Guthaben</div>
-        <div class="card-number">18.50€</div>
+        <div class="card-number">0.50€</div>
     </div>
 
     <table class="product-table">
@@ -68,7 +98,7 @@
             </tr>
 
             <tr>
-                <td><img src="assets/products/RedBull.webp" alt="Drink"></td>
+                <td><img src="assets/products/redbull.webp" alt="Drink"></td>
                 <td>
                     <h3>RedBull</h3>
                     <p>05.08.2025 07:30</p>
@@ -77,7 +107,7 @@
             </tr>
 
             <tr>
-                <td><img src="assets/products/RedBull.webp" alt="Drink"></td>
+                <td><img src="assets/products/redbull.webp" alt="Drink"></td>
                 <td>
                     <h3>RedBull</h3>
                     <p>05.08.2025 07:30</p>
@@ -86,7 +116,7 @@
             </tr>
 
             <tr>
-                <td><img src="assets/products/RedBull.webp" alt="Drink"></td>
+                <td><img src="assets/products/redbull.webp" alt="Drink"></td>
                 <td>
                     <h3>RedBull</h3>
                     <p>05.08.2025 07:30</p>
@@ -118,50 +148,35 @@
     <div class="popup">
         <h3 class="love">Made with<span style="color: red;"> &hearts;</span> by CodeByJeeens</h3>
         <p>Ich hoffe ihr habt Bock</p>
-        <a class="close-btn"><img src="assets/icons/close.webp" alt="Schließen"></a>
+        <a class="close-btn"><img src="assets/icons/close.png" alt="Schließen"></a>
         <nav class="navbarpop">
             <a href="#" class="navbar-itempop navbar-item2pop">
-                <img src="assets/icons/discord.webp" alt="">
+                <img src="assets/icons/discord2.png" alt="">
             </a>
 
             <a href="http://qr.taketv.net/card/takepzsnetsufi" class="navbar-itempop navbar-itempop">
-                <img src="assets/icons/coffee.webp" alt="">
+                <img src="assets/icons/coffee2.png" alt="">
             </a>
 
             <ahref="https://qr.taketv.net/card/takepzsnetsufi" class="navbar-itempop navbar-item3pop">
-                <img src="assets/icons/github.webp" alt="">
+                <img src="assets/icons/github2.png" alt="">
                 </a>
         </nav>
     </div>
 
     <nav class="navbar">
         <a href="#" class="navbar-item navbar-item2" id="open-btn">
-            <img src="assets/icons/heart.webp" alt="">
+            <img src="assets/icons/heart2.png" alt="Liebe" class="heart">
         </a>
 
         <a href="http://qr.taketv.net/card/takepzsnetsufi" class="navbar-item navbar-item">
-            <img src="assets/icons/add.webp" alt="">
+            <img src="assets/icons/add2.webp" alt="Aufladen" class="add">
         </a>
 
         <a href="#" class="navbar-item navbar-item3">
-            <img src="assets/icons/setting.webp" alt="">
+            <img src="assets/icons/setting2.png" alt="Einstellungen" class="settings">
         </a>
     </nav>
-
-    <!-- Script -->
-    <script src="//unpkg.com/hammer-touchemulator@0.0.2/touch-emulator.js"></script>
-    <script>
-        TouchEmulator()
-    </script>
-    <script src="scripts/pulltorefresh.js" type="text/javascript"></script>
-    <script type='text/javascript'>
-        PullToRefresh.init({
-            mainElement: 'body',
-            onRefresh: function() {
-                window.location.reload();
-            }
-        });
-    </script>
 
 </body>
 
